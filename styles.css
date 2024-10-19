@@ -1,0 +1,165 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Calculator container */
+  #calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Display styling */
+  #display {
+    background-color: #333;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow-x: auto;
+    margin-bottom: 20px; /* Add margin to separate display from keypad */
+  }
+  
+  /* Keypad grid */
+  #key-pad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows */
+    gap: 10px;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #d0d0d0;
+  }
+  
+  /* Number buttons */
+  #zero {
+    grid-column: 1 / span 2; /* Make "0" span across 2 columns */
+    grid-row: 5;
+  }
+  
+  #one {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  
+  #two {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  
+  #three {
+    grid-column: 3;
+    grid-row: 4;
+  }
+  
+  #four {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  #five {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  
+  #six {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  
+  #seven {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  #eight {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  #nine {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  
+  /* Modifier buttons */
+  #add {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  
+  #subtract {
+    grid-column: 4;
+    grid-row: 3;
+  }
+  
+  #multiply {
+    grid-column: 4;
+    grid-row: 4;
+  }
+  
+  #divide {
+    grid-column: 4;
+    grid-row: 5;
+  }
+  
+  #decimal {
+    grid-column: 3;
+    grid-row: 5;
+  }
+  
+  /* Clear and equals buttons */
+  #clear {
+    grid-column: 1 / span 1;
+    grid-row: 1;
+    background-color: #f44336;
+  }
+  
+  #equals {
+    grid-column: 4;
+    grid-row: 1;
+    background-color: #ffca28;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 600px) {
+    #calculator {
+      max-width: 100%;
+    }
+  
+    button {
+      font-size: 1.2rem;
+      padding: 15px;
+    }
+  }
+  

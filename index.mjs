@@ -1,5 +1,3 @@
-import "./styles.css";
-
 // Initial setup
 let inputArray = [];
 let operatorArray = [];
